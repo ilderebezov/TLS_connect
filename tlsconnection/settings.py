@@ -126,7 +126,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CLIENT_SECURITY_CERTIFICATE_FILE = '/home/user/test/Qualixdev/1/client03test.crt'
-CLIENT_SECURITY_KEY_FILE = '/home/user/test/Qualixdev/1/client03test.key'
-SECURITY_CERTIFICATE_FILE = '/etc/ssl/certs/ca-certificates.crt'
+CLIENT_SECURITY_CERTIFICATE_FILE = ''  # input full path to client *.crt file
+SECURITY_CERTIFICATE_FILE = os.environ.get('') # input name your name.crt file
+PATH_CLIENT = '' # input path to client *.key file
+CLIENT_SECURITY_KEY_FILE = os.environ.get(PATH_CLIENT, '') # input client name *.key file
 
