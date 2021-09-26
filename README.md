@@ -3,9 +3,10 @@ The certificate and key are written in the settings.py of the project modules.
 
 In the settings.py:
 
-CLIENT_SECURITY_CERTIFICATE_FILE = ''  # input full path to client *.crt file
+CLIENT_SECURITY_CERTIFICATE_FILE = '/home/.../cliet_name_file.crt'  # input full path to client *.crt file
 
-SECURITY_CERTIFICATE_FILE = os.environ.get('') # input name your name.crt file
+SECURITY_CERTIFICATE_FILE = os.environ.get('your_CA.crt') # input name your name.crt file
 
-PATH_CLIENT = '' # input path to client *.key file
-CLIENT_SECURITY_KEY_FILE = os.environ.get(PATH_CLIENT, '') # input client name *.key file
+PATH_CLIENT = '/home/key file folder/' # input path to client *.key file
+
+CLIENT_SECURITY_KEY_FILE = os.environ.get(PATH_CLIENT, 'client_name_file.key') # input client name *.key file
